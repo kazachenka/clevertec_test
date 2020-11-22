@@ -53,12 +53,12 @@ module.exports = {
         collapseWhitespace: isProd
       }
     }),
-    new CopyPlugin({
-      patterns: [{
+    new CopyPlugin([
+      {
         from: path.resolve(__dirname, 'public'),
         to: path.resolve(__dirname, 'dist')
-      }]
-    }),
+      }
+    ]),
     new MiniCssExtractPlugin({
       filename: 'bundle.css'
     })
@@ -83,7 +83,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: jsLoaders()
-      }
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ]
   }
 }
