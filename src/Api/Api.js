@@ -48,9 +48,6 @@ class ApiClass {
   async getPhotos(id) {
     return await this.getData(this.photos,id);
   }
-  async getComments(id) {
-    return await this.getData(this.comments,id);
-  }
 }
 
 

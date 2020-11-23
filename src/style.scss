@@ -9,11 +9,12 @@
   transition: 0.2s;
   margin: 25px 15px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   &:hover {
     border: 1px solid #696969;
   }
+  color: #3e5945;
 }  
  
 
@@ -30,7 +31,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: bisque;
+  background-color: #aabdaf;
   border-radius: 10px;
   h3 {
     font-size: 30px;
@@ -53,6 +54,10 @@ button {
   height: 25px;
   border-radius:5px;
   margin-left: 35px;
+  &:hover{
+    color : #fff;
+    background-color: #1d211e;
+  }
 }
 .user_button {
   position: absolute;

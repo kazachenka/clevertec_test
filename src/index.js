@@ -3,9 +3,9 @@ import { blockUsers,Content,blockAlbums, blockPhotos }  from './Content';
 import './style.scss';
 
 const root = document.querySelector('#root');
-root.innerHTML = blockPhotos;
+root.innerHTML = blockUsers;
 Content.ViewUsers()
-Content.ViewPhotos()
-Content.ViewAlbums()
+Content.ViewPhotos(3)
+Content.ViewAlbums(5)
 
 

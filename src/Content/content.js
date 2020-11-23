@@ -59,7 +59,7 @@ class ContentClass {
             <h2 class="album_h2">title:</h2>
             <p>${data[i].title}</p>
           </div>
-          <button class="album_button">about albums</button>
+          <button class="album_button">about album</button>
         `
       })
     });
@@ -74,9 +74,6 @@ class ContentClass {
         ` 
         document.querySelector(`.picture${i}`).style.backgroundImage = `url('${data[i].thumbnailUrl}')` 
       });
-    });
-    Api.getComments(number).then(data => {
-      console.log(data)
     });
   }
 }
