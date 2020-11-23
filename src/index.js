@@ -1,10 +1,11 @@
 import { Api } from './Api';
-import { blockUsers,View }  from './View';
+import { blockUsers,Content,blockAlbums, blockPhotos }  from './Content';
 import './style.scss';
 
 const root = document.querySelector('#root');
-root.innerHTML = blockUsers;
-View.ViewUsers()
-View.ViewAlbums()
+root.innerHTML = blockPhotos;
+Content.ViewUsers()
+Content.ViewPhotos()
+Content.ViewAlbums()
 
 

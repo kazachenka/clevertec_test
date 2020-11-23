@@ -5,6 +5,7 @@ class ApiClass {
     this.user = 'user';
     this.albums = 'albums';
     this.photos = 'photos';
+    this.comments = 'comments';
   }
 
   async getData(category,id) {
@@ -21,6 +22,9 @@ class ApiClass {
     }
     if (category === this.photos){
       str += `/${this.photos}?albumId=${id}`
+    }
+    if (category === this.comments){
+      str += `/${this.comments}?postId=${id}`
     }
 
     const result = await fetch(str);
@@ -43,6 +47,9 @@ class ApiClass {
   }
   async getPhotos(id) {
     return await this.getData(this.photos,id);
+  }
+  async getComments(id) {
+    return await this.getData(this.comments,id);
   }
 }
 
