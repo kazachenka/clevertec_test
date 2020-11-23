@@ -11,3 +11,32 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+#root {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: bisque;
+  border-radius: 10px;
+}
+.user {
+  width: 170px;
+  height: 250px;
+  margin: 25px 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  &:hover {
+    border: 2px solid #696969;
+  }
+  &_photo{
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
