@@ -3,6 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+@mixin boxSize ($height) {
+  width: 170px;
+  height: $height;
+  transition: 0.2s;
+  margin: 25px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #696969;
+  }
+  color: #3e5945;
+}  
+ 
 
 .container {
   width: 1170px;
@@ -17,26 +31,121 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  background-color: #aabdaf;
+  border-radius: 10px;
+  h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top:20px;
+  }
+  h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -10px;
+  }
+}
+.user_container {
   display: flex;
   flex-wrap: wrap;
-  background-color: bisque;
-  border-radius: 10px;
+}
+button {
+  width: 100px;
+  height: 25px;
+  border-radius:5px;
+  margin-left: 35px;
+  &:hover{
+    color : #fff;
+    background-color: #1d211e;
+  }
+}
+.user_button {
+  position: absolute;
+  top: 85%;
+}
+.album_button {
+  position: absolute;
+  top: 80%;
 }
 .user {
-  width: 170px;
-  height: 250px;
-  margin: 25px 15px;
-  background-color: #fff;
-  border-radius: 20px;
-  &:hover {
-    border: 2px solid #696969;
-  }
-  &_photo{
+  @include boxSize(320px);
+  position: relative;
+  &_photo {
+    position: relative;
     width: 150px;
     height: 150px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     border-radius: 5px;
+  }
+  &_h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  &_h2 {
+    font-size: 12px;
+    margin-top:8px;
+    text-align: center;
+  }
+}
+.album_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.album {
+  @include boxSize(200px);
+  position: relative;
+  &_h1 {
+    font-size: 25px;
+    margin-top:30px;
+    text-align: center;
+  }
+  &_h2 {
+    margin-top:6px;
+    font-size: 18px;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 14px;
+    display: inline;
+  }
+  div {
+    width:140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+.back {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  width:200px;
+  height: 40px;
+  font-size: 20px;
+}
+.photo_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo {
+  @include boxSize(260px)
+}
+.picture {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  &_h2{
+    font-size: 16px;
+    margin-top:20px;
+    width:166px;
+    text-align: center;
   }
 }
