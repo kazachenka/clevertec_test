@@ -10,10 +10,6 @@
   margin: 25px 15px;
   background-color: #fff;
   border-radius: 10px;
-  cursor: pointer;
-  &:hover {
-    border: 1px solid #696969;
-  }
   color: #3e5945;
 }  
  
@@ -57,6 +53,7 @@ button {
   &:hover{
     color : #fff;
     background-color: #1d211e;
+    cursor: pointer;
   }
 }
 .user_button {

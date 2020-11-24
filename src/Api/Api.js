@@ -39,9 +39,6 @@ class ApiClass {
   async getAllUsers() {
     return await this.getData(this.users);
   }
-  async getUsers(id) {
-    return await this.getData(this.user,id);
-  }
   async getAlbums(id) {
     return await this.getData(this.albums,id);
   }

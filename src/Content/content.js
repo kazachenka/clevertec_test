@@ -39,11 +39,11 @@ class ContentClass {
         <h1 class="user_h1">${data[i].name}</h1>
         <h2 class="user_h2">city: ${data[i].address.city}</h2>
         <h2 class="user_h2"> ${data[i].email}</h2>
-        <button class="user_button">her albums</button>
+        <button class="user_button" data-user="${i}">albums</button>
         `
       })
     })
-    Api.getPhotos(11).then (data => {
+    Api.getPhotos(1).then (data => {
       const collectionPhotoForUser = document.querySelectorAll('.user_photo');
        collectionPhotoForUser.forEach((e,i) => {
        e.style.backgroundImage = `url('${data[i].thumbnailUrl}')` 
@@ -53,13 +53,13 @@ class ContentClass {
   ViewAlbums(number){
     Api.getAlbums(number).then (data => {
       document.querySelectorAll('.album').forEach((e,i) => {
-        e.innerHTML += `
+        e.innerHTML += ` 
           <h1 class="album_h1">Album №${i+1}</h1>
           <div>
             <h2 class="album_h2">title:</h2>
             <p>${data[i].title}</p>
           </div>
-          <button class="album_button">about album</button>
+          <button class="album_button" data-album="${i}">about album</button>
         `
       })
     });
