@@ -14,8 +14,9 @@ let blockAlbums =  `<h3 class="name"></h3>
   for (let i = 1; i <= 10; i++) {
     blockAlbums += `<div class="album album${i}"></div>`
   }
-blockAlbums += `<button class="back album_back">back</button>
-</div>`;
+blockAlbums += `</div><button class="back album_back">back</button>
+<div class="emptiness"></div>
+`;
 
 //
 
@@ -26,8 +27,9 @@ for (let i = 0; i < 50; i++) {
   blockPhotos += `<div class="photo photo${i}"></div>`
 }
 
-blockPhotos += `<button class="back photos_back">back</button>
-</div>`;
+blockPhotos += `</div><button class="back photos_back">back</button>
+<div class="emptiness"></div>
+`;
 
 class ContentClass {
   ViewUsers() {
