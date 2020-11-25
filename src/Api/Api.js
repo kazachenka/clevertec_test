@@ -2,7 +2,7 @@ class ApiClass {
   constructor() {
     this.path = 'https://jsonplaceholder.typicode.com';
     this.users = 'users';
-    this.user = 'user';
+    // this.user = 'user';
     this.albums = 'albums';
     this.photos = 'photos';
     this.comments = 'comments';
@@ -39,9 +39,6 @@ class ApiClass {
   async getAllUsers() {
     return await this.getData(this.users);
   }
-  async getUsers(id) {
-    return await this.getData(this.user,id);
-  }
   async getAlbums(id) {
     return await this.getData(this.albums,id);
   }
@@ -49,7 +46,6 @@ class ApiClass {
     return await this.getData(this.photos,id);
   }
 }
-
 
 
 
